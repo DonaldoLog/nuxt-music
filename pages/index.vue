@@ -98,10 +98,12 @@ export default {
 </script>
 
 <style lang="scss">
+  @import "bulma/bulma.sass";
+
   .results {
     margin-top: 50px;
   }
-  .is-active {
-    border: 3px #23d160 solid;
-  }
+  // .is-active {
+  //   border: 3px #23d160 solid;
+  // }
 </style>

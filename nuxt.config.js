@@ -13,7 +13,28 @@ module.exports = {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ]
   },
-  plugins: ['~/plugins/plugins.js'],
+  plugins: [
+    '~/plugins/plugins.js'
+  ],
+  modules: [
+    ['nuxt-i18n', {
+      locales: ['en', 'es'],
+      defaultLocale: 'en',
+      vueI18n:{
+        fallbackLocale: 'en',
+        messages : {
+          en: {
+            search: 'Search',
+            about: 'About'
+          },
+          es: {
+            search: 'Buscar',
+            about: 'Nosotros'
+          }
+        }
+      }
+    }]
+  ],
   /*
   ** Customize the progress bar color
   */
