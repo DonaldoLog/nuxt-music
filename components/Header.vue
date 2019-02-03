@@ -6,15 +6,16 @@
           .navbar-left
             .navbar-item
               strong App music
-          .dropdown.is-hoverable
-            .dropdown-trigger
-              button.button(aria-haspopup="true", aria-controls="dropdown-menu2")
-                span Lang
-            .dropdown-menu(id="dropdown-menu2", role="menu")
-              .dropdown-content
-                a.dropdown-item(@click="selectLang('en')") en
-                a.dropdown-item(@click="selectLang('es')") es
           .navbar-end.navbar-menu
+            .navbar-iten
+              .dropdown.is-hoverable
+                .dropdown-trigger
+                  a.button(aria-haspopup="true", aria-controls="dropdown-menu2")
+                    span Lang
+                .dropdown-menu(id="dropdown-menu2", role="menu")
+                  .dropdown-content
+                    a.dropdown-item(@click="selectLang('en')") en
+                    a.dropdown-item(@click="selectLang('es')") es
             router-link.navbar-item(to="/") {{ $t('search') }}
             router-link.navbar-item(to="about") {{ $t('about') }}
     .hero-body

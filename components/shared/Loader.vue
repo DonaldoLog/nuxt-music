@@ -1,7 +1,7 @@
 <template lang="pug">
   .container
     .content.has-text-centered
-      h1 Cargando
+      h1 {{ $t('loading') }}
 </template>
 
 <style lang="scss" scoped>

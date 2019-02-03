@@ -2,8 +2,8 @@
   main
     transition(name="move")
       ap-notification(v-show="showNotification", :tipo="tipo.clase")
-        p(slot="body", v-show="tipo.clase == 'is-danger'") Sin resultados
-        p(slot="body", v-show="tipo.clase == 'is-success'") {{ searchMessage }}
+        p(slot="body", v-show="tipo.clase == 'is-danger'") {{ $t('responseSearch') }} 0
+        p(slot="body", v-show="tipo.clase == 'is-success'") {{ $t('responseSearch') }} {{ searchMessage }}
 
     transition(name="move")
       ap-loader(v-show="isLoading")
@@ -13,14 +13,14 @@
         .container
           input.input.is-large(
             type="text",
-            placeholder="Buscar canciones...",
+            :placeholder="$t('searchPlaceHolder')",
             v-model="searchQuery",
             @keyup.enter="search"
           )
-          a.button.is-info.is-large(@click="search") Buscar
+          a.button.is-info.is-large(@click="search") {{ $t('search') }}
           a.button.is-danger.is-large &times;
           p
-            small {{ searchMessage }}
+            small {{ $t('responseSearch') }} {{ searchMessage }}
       .container
         div(v-if="tracks.length > 0")
           .columns.is-multiline
@@ -62,7 +62,7 @@ export default {
   },
   computed: {
     searchMessage () {
-      return `Encontrados: ${this.tracks.length}`
+      return `${this.tracks.length}`
     }
   },
   watch: {

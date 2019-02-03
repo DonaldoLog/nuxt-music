@@ -3,7 +3,7 @@
     .columns
       .column.is-4.is-offset-4
         .notification(:class="tipo")
-          slot(name="body") Algo anduvo mal
+          slot(name="body") {{ $t('errorNotif') }}
 </template>
 <script>
 export default {

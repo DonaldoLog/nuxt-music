@@ -25,11 +25,19 @@ module.exports = {
         messages : {
           en: {
             search: 'Search',
-            about: 'About'
+            about: 'About',
+            searchPlaceHolder: 'Search songs...',
+            responseSearch: 'Results: ',
+            loading: 'Loading...',
+            errorNotif: 'Something went wrong'
           },
           es: {
             search: 'Buscar',
-            about: 'Nosotros'
+            about: 'Nosotros',
+            searchPlaceHolder: 'Buscar canciones...',
+            responseSearch:'Encontrados: ',
+            loading: 'Cargando...',
+            errorNotif:'Algo salio mal'
           }
         }
       }
